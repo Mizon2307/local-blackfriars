@@ -157,7 +157,7 @@
         // var
         var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
-        var customMarker = "/wp-content/themes/Wordpress-Starter-Kit/assets/img/map-marker.svg";
+        var customMarker = "/wp-content/themes/local-blackfriars/assets/img/map-marker.svg";
 
         // create marker
         var marker = new google.maps.Marker({
