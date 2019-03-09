@@ -3168,7 +3168,7 @@ table {
 }
 
 .leading-tight {
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .leading-normal {
@@ -9170,7 +9170,7 @@ a:hover {
   }
 
   .sm\:leading-tight {
-    line-height: 1.25;
+    line-height: 1.2;
   }
 
   .sm\:leading-normal {
@@ -14833,7 +14833,7 @@ a:hover {
   }
 
   .md\:leading-tight {
-    line-height: 1.25;
+    line-height: 1.2;
   }
 
   .md\:leading-normal {
@@ -20496,7 +20496,7 @@ a:hover {
   }
 
   .lg\:leading-tight {
-    line-height: 1.25;
+    line-height: 1.2;
   }
 
   .lg\:leading-normal {
@@ -26159,7 +26159,7 @@ a:hover {
   }
 
   .xl\:leading-tight {
-    line-height: 1.25;
+    line-height: 1.2;
   }
 
   .xl\:leading-normal {
