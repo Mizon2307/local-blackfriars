@@ -1,0 +1,386 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+
+
+ body {
+   height:100%;
+   width:100%;
+   margin:0;
+   padding:0;
+   -webkit-font-smoothing:antialiased;
+   line-height: 1.4;
+   letter-spacing: 0.02em;
+   outline:none;
+   overflow-x: hidden;
+ }
+
+ *{
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+  outline: 0;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ a {
+   transition: all 0.3s ease;
+   color:#00B193;
+   text-decoration: none;
+ }
+
+ a:hover {
+   color:white;
+ }
+
+
+ /** Additional CSS **/
+
+.menu {
+  top:0;
+  left:0;
+  transform: translateX(100vw);
+  transition: 0.4s all cubic-bezier(0.6, 0.04, 0.4, 1);
+  visibility: hidden;
+}
+
+@screen lg {
+  .menu {
+    transform: none;
+    transition: none;
+    visibility: visible;
+  }
+}
+
+/** Trigger mobile nav and styling for site nav ul **/
+.active-nav {
+  transform: translateX(0px);
+  visibility: visible;
+}
+
+#hamburger {
+  width: 24px;
+  height: 17px;
+}
+
+.bar {
+  height: 2px;
+  user-select:none;
+  transition:0.25s;
+}
+
+.bar:nth-child(1){
+  top: 0;
+}
+.bar:nth-child(2){
+  top: 46%;
+}
+.bar:nth-child(3){
+  bottom: 0%;
+}
+
+.animate .bar:nth-child(1) {
+  transform:translateY(10px) rotate(135deg);
+  background:$white;
+}
+
+.animate .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.animate .bar:nth-child(3) {
+  transform:translateY(-5px) rotate(-135deg);
+  background:$white;
+}
+
+.animate .menu {
+  display:block;
+}
+
+
+ /** Custom Fonts **/
+
+ @font-face {
+     font-family: 'ginger';
+     src: url('../assets/fonts/F37Ginger.woff2') format('woff2'),
+         url('../assets/fonts/F37Ginger.woff') format('woff'),
+         url('../assets/fonts/F37Ginger.ttf') format('truetype'),
+         url('../assets/fonts/F37Ginger.svg#F37Ginger') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'ginger-italic';
+     src: url('../assets/fonts/F37Ginger-Italic.woff2') format('woff2'),
+         url('../assets/fonts/F37Ginger-Italic.woff') format('woff'),
+         url('../assets/fonts/F37Ginger-Italic.ttf') format('truetype'),
+         url('../assets/fonts/F37Ginger-Italic.svg#F37Ginger-Italic') format('svg');
+     font-weight: normal;
+     font-style: italic;
+ }
+
+ @font-face {
+     font-family: 'ginger-bold';
+     src: url('../assets/fonts/F37Ginger-Bold.woff2') format('woff2'),
+         url('../assets/fonts/F37Ginger-Bold.woff') format('woff'),
+         url('../assets/fonts/F37Ginger-Bold.ttf') format('truetype'),
+         url('../assets/fonts/F37Ginger-Bold.svg#F37Ginger-Bold') format('svg');
+     font-weight: bold;
+     font-style: normal;
+ }
+
+ @font-face {
+   font-family: "local";
+   src:url("../assets/fonts/local.eot");
+   src:url("../assets/fonts/local.eot?#iefix") format("embedded-opentype"),
+     url("../assets/fonts/local.woff") format("woff"),
+     url("../assets/fonts/local.ttf") format("truetype"),
+     url("../assets/fonts/local.svg#local") format("svg");
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ [data-icon]:before {
+   font-family: "local" !important;
+   content: attr(data-icon);
+   font-style: normal !important;
+   font-weight: normal !important;
+   font-variant: normal !important;
+   text-transform: none !important;
+   speak: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ [class^="i-"]:before,
+ [class*=" i-"]:before {
+   font-family: "local" !important;
+   font-style: normal !important;
+   font-weight: normal !important;
+   font-variant: normal !important;
+   text-transform: none !important;
+   speak: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ .i-ios-play-outline:before {
+   content: "\61";
+ }
+ .i-play:before {
+   content: "\62";
+ }
+
+
+ /** Slick overides **/
+
+ .slick-track {
+   height:100%;
+ }
+
+ .slick-list {
+   height:100%;
+ }
+
+ .slick-arrow {
+    display: block;
+    top: 50%;
+    position: absolute;
+    left: 2rem;
+    font-size: 2.5em;
+    z-index:9;
+    outline: none;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.slick-arrow:focus {
+  outline: none;
+}
+
+.slick-next {
+    left: auto;
+    right: 2rem;
+    transform: none;
+    top: 54%;
+}
+
+.slick-dots {
+  position: relative;
+  bottom: 3.75rem;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  height: 12px;
+  width: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 0 10px;
+  padding: 0;
+  color: transparent;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+
+.slick-dots li button:hover {
+  background:white;
+}
+
+.slick-dots li button:focus {
+  outline:none;
+}
+
+.slick-dots .slick-active button {
+  background:white;
+}
+
+
+.text-gallery .slider {
+    min-height: 25rem;
+}
+
+.text-gallery .slider .slick-arrow {
+  top:44%;
+  font-size:2em;
+}
+
+.text-gallery .slider .slick-next {
+  top:48%;
+}
+
+
+ /** Gallery / List  **/
+
+@screen md {
+  .gallery-list .item:nth-of-type(1) {
+    order:2;
+  }
+}
+
+.features:before {
+  content:'';
+  width:12rem;
+  height:2px;
+  border-bottom:2px dotted #00B193;
+  position: absolute;
+  left:-12rem;
+  top:50%;
+}
+
+.features li:before {
+  content:'';
+  height:3rem;
+  width:2px;
+  border-right:2px dotted #00B193;
+  position: absolute;
+  left:-3.5rem;
+  top:1.5rem;
+}
+
+@screen sm {
+  .features li:before {
+    top:1.8rem;
+    height:3.3rem;
+  }
+}
+
+.features li:last-child:before {
+  content:'';
+  display: none;
+}
+
+.features li:after {
+  content:'';
+  width:3.5rem;
+  height:2px;
+  border-bottom:2px dotted #00B193;
+  position: absolute;
+  left:-3.5rem;
+  top:50%;
+}
+
+@screen sm {
+  .features li:after {
+
+  }
+}

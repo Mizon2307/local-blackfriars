@@ -1,0 +1,36 @@
+{
+  "name": "tailwind-jekyll",
+  "version": "4.0.0",
+  "description": "A starter kit for using Tailwind with Jekyll",
+  "main": "gulpfile.config.js",
+  "devDependencies": {
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.8",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-order": "^1.2.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-print": "^5.0.0",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "postcss-import": "^11.1.0",
+    "tailwindcss": "^0.7.4"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production gulp",
+    "build:dev": "gulp",
+    "start": "gulp serve"
+  },
+  "author": "Taylor Bryant",
+  "license": "ISC"
+}
