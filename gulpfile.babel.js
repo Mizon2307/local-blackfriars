@@ -82,7 +82,7 @@ task("startServer", () => {
     files: [siteRoot],
     proxy: "local.test",
     open: "local",
-    port: 5000,
+    port: 4000,
   });
 
   watch(
