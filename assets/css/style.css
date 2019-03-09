@@ -314,9 +314,8 @@
   background:white;
 }
 
-
 .text-gallery .slider {
-    min-height: 25rem;
+  min-height: 25rem;
 }
 
 .text-gallery .slider .slick-arrow {
@@ -330,6 +329,19 @@
 
 
  /** Gallery / List  **/
+
+ .gallery-list .slider {
+   min-height: 25rem;
+ }
+
+.gallery-list .slider .slick-arrow {
+ top:44%;
+ font-size:2em;
+}
+
+.gallery-list .slider .slick-next {
+ top:48%;
+}
 
 @screen md {
   .gallery-list .item:nth-of-type(1) {
@@ -349,7 +361,7 @@
 
 .features li:before {
   content:'';
-  height:3rem;
+  height:2.85rem;
   width:2px;
   border-right:2px dotted #00B193;
   position: absolute;
@@ -360,7 +372,7 @@
 @screen sm {
   .features li:before {
     top:1.8rem;
-    height:3.3rem;
+    height:3.2rem;
   }
 }
 

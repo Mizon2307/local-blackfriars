@@ -1,4 +1,4 @@
-<section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="gallery relative">
+<section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="gallery relative bg-black">
 
     <div class="slider h-2/3"
       <?php

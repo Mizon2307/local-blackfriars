@@ -3,14 +3,25 @@
  $txt = get_sub_field('text');
 ?>
 
-<section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="text-gallery bg-white text-black pt-16 sm:pt-20">
+<section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="gallery-list bg-white text-black pt-16 sm:pt-20 md:pt-24">
 
   <div class="container mx-auto max-w-xl flex flex-wrap">
-    <div class="w-full md:w-1/2 sm:pr-10 md:pr-16 lg:pr-24 mb-12 md:mb-0 px-8 self-center">
-      <h3 class="text-teal text-4xl sm:text-5xl lg:text-6xl tracking-wide leading-tight mb-8 sm:mb-10"><?php echo $title; ?></h3>
-      <?php echo $txt; ?>
+
+    <div class="item w-full md:w-1/2 pl-24 mb-12 sm:mb-16 md:py-6 md:mb-0 lg:pl-32">
+      <ul class="features relative">
+        <?php
+          if( have_rows ('list') ):
+          while ( have_rows ('list') ) : the_row();
+          $item = get_sub_field('item');
+        ?>
+
+          <li class="relative w-full list-reset font-bold mb-1 text-3xl sm:text-4xl"><span class="inline-block bg-teal text-white px-2"><?php echo $item; ?></span></li>
+
+        <?php endwhile; endif; ?>
+      </ul>
     </div>
-    <div class="w-full md:w-1/2 md:px-6">
+
+    <div class="item w-full md:w-1/2 md:px-6">
 
       <div class="slider h-full"
         <?php
