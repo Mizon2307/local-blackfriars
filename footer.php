@@ -11,7 +11,7 @@
 <footer id="contact" class="flex bg-brown text-white py-16 sm:py-20 md:py-24">
   <div class="container max-w-xl mx-auto flex flex-wrap px-8">
     <div class="w-full md:w-1/2 md:pr-3">
-      <h3 class="text-4xl text-5xl tracking-wide"><?php the_field('contact_title', 'option'); ?></h3>
+      <h3 class="text-4xl sm:text-5xl tracking-wide"><?php the_field('contact_title', 'option'); ?></h3>
       <p class="underline mt-16 sm:mt-20 mb-12 md:mb-0 text-2xl font-bold">T: <?php the_field('telephone', 'option'); ?></p>
       <p class="mt-12 hidden md:block"><?php the_field('address', 'option'); ?></p>
     </div>
