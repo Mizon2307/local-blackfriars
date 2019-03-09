@@ -49,8 +49,6 @@
 
 			<a href="/" class="inline-block md:hidden z-20"><img src="<?php the_field('mobile_logo', 'option'); ?>" class="w-20"></a>
 
-
-
 		<?php
 			  $parts = get_field('blocks');
 			  if(!empty($parts)) {
@@ -61,7 +59,6 @@
 			        }
 			      } //end foreach $parts
 			?>
-
 
 				<ul class="menu bg-brown m-0 pt-20 pb-8 px-6 text-center lg:p-0 absolute w-full lg:inline-block lg:relative lg:w-auto">
 

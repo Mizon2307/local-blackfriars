@@ -1,8 +1,4 @@
-<?php
-  $label = get_sub_field('nav_label');
-?>
-
-<section id="section-<?php echo $label; ?>" class="gallery relative">
+<section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="gallery relative">
 
     <div class="slider h-2/3"
       <?php
@@ -18,26 +14,13 @@
 
     <?php
       if( have_rows ('slides') ):
-    ?>
-
-    <?php
       while ( have_rows ('slides') ) : the_row();
       $img = get_sub_field('image_file');
     ?>
 
-        <div class="bg-cover bg-center bg-no-repeat" style="background-image:url('<?php echo $img; ?>');"></div>
+      <div class="bg-cover bg-center bg-no-repeat" style="background-image:url('<?php echo $img; ?>');"></div>
 
-      <?php
-        endwhile;
-      ?>
-
-      <?php
-        else :
-      ?>
-
-      <?php
-        endif;
-      ?>
+    <?php endwhile; endif; ?>
 
     </div>
 
