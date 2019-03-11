@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="184.289" viewBox="0 0 160 184.289">
+  <g id="_360-pano-icon" data-name="360-pano-icon" transform="translate(-880 -1768.396)">
+    <text id="_360" data-name="360" transform="translate(960 1879)" fill="#fff" font-size="50" font-family="F37Ginger-Light, F37 Ginger" font-weight="300"><tspan x="-43.396" y="0">360</tspan></text>
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(880 1780)" fill="none" stroke="#fff" stroke-width="3">
+      <circle cx="80" cy="80" r="80" stroke="none"/>
+      <circle cx="80" cy="80" r="78.5" fill="none"/>
+    </g>
+    <path id="Path_19" data-name="Path 19" d="M954.477,1755.464l12.311,12.153-12.311,12" transform="translate(-3 14)" fill="none" stroke="#fff" stroke-width="3"/>
+    <path id="Path_20" data-name="Path 20" d="M954.477,1755.464l12.311,12.153-12.311,12" transform="translate(1918.265 3707.081) rotate(180)" fill="none" stroke="#fff" stroke-width="3"/>
+  </g>
+</svg>
