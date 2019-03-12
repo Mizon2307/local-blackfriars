@@ -16,6 +16,21 @@
  });
 
 
+
+ // Pano VR view
+
+ window.addEventListener('load', onVrViewLoad);
+
+ function onVrViewLoad() {
+   // Selector '#vrview' finds element with id 'vrview'.
+   var vrView = new VRView.Player('#vrview', {
+     image: 'http://local.test/wp-content/themes/local-blackfriars/assets/img/BLACKFRIARS_PANO_COURTYARD.jpg',
+     is_stereo: true
+   });
+ }
+
+
+
   // Smooth scroll (anchor links)
 
   $('a[href*="#"]')
@@ -104,6 +119,29 @@
       slidesToShow: 1,
       'prevArrow': '<i class="icon i-ios-play-outline text-white"></i>',
       'nextArrow': '<i class="icon i-ios-play-outline slick-next text-white"></i>',
+      autoplaySpeed:4500,
+      speed:1000,
+      mobileFirst: true
+    });
+  });
+
+  $('.tab-slider').each(function() {
+    var arrows = $(this).data('arrows'),
+      dots = $(this).data('dots'),
+      autoplay = $(this).data('autoplay'),
+      fade = $(this).data('fade'),
+      infinite = $(this).data('infinite');
+
+    $(this).slick({
+      arrows: arrows || false,
+      dots: dots || false,
+      autoplay: autoplay || false,
+      fade: fade || false,
+      infinite: infinite || false,
+
+      slidesToShow: 1,
+      'prevArrow': '<i class="icon i-play text-black"></i>',
+      'nextArrow': '<i class="icon i-play slick-next text-black"></i>',
       autoplaySpeed:4500,
       speed:1000,
       mobileFirst: true
@@ -222,7 +260,6 @@
         map = new_map( $(this) );
 
       });
-
 
 
 

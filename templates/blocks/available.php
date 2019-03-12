@@ -26,7 +26,7 @@
 
   <div class="container mx-auto">
 
-    <div class="slider"
+    <div class="tab-slider px-6"
       <?php
         $options = get_sub_field('gallery_options');
         if( $options ): ?>
@@ -46,37 +46,44 @@
       ?>
 
       <?php if(get_sub_field('content_type') == "image") { ?>
-        <div><img src="<?php echo $img; ?>"></div>
+        <div><img src="<?php echo $img; ?>" class="plan"></div>
       <?php } ?>
 
 
       <?php if(get_sub_field('content_type') == "list") { ?>
-        <div>
+        <div class="flex flex-wrap items-center justify-center">
 
-          <h3 class="text-black text-4xl sm:text-5xl tracking-wide text-left mb-10"><?php echo $title; ?></h3>
+          <span class="container mx-auto flex flex-wrap max-w-lg xl:max-w-xl px-4 lg:px-0 h-full list-container">
 
-          <?php
-            if( have_rows ('lists') ):
-            while ( have_rows ('lists') ) : the_row();
-          ?>
-
-          <ul>
+            <h3 class="text-black text-4xl sm:text-5xl tracking-wide text-left mb-10 w-full"><?php echo $title; ?></h3>
 
             <?php
-              if( have_rows ('items') ):
-              while ( have_rows ('items') ) : the_row();
-              $icon = get_sub_field('icon');
-              $txt = get_sub_field('text');
+              if( have_rows ('lists') ):
+              while ( have_rows ('lists') ) : the_row();
             ?>
 
-              <li><img src="<?php echo $icon; ?>"><p><?php echo $txt; ?></p></li>
+            <ul class="p-0 w-full md:mb-3 md:w-1/2 xl:w-1/3 lists">
 
+              <?php
+                if( have_rows ('items') ):
+                while ( have_rows ('items') ) : the_row();
+                $icon = get_sub_field('icon');
+                $txt = get_sub_field('text');
+              ?>
+
+                <li class="list-reset mb-3 flex flex-wrap items-center xl:mb-8">
+                  <img src="<?php echo $icon; ?>" class="inline-block mr-4 w-6 ">
+                  <p class="inline-block text-sm xl:text-base"><?php echo $txt; ?></p>
+                </li>
+
+
+              <?php endwhile; endif; ?>
+
+            </ul>
 
             <?php endwhile; endif; ?>
 
-          </ul>
-
-          <?php endwhile; endif; ?>
+          </span>
 
         </div>
       <?php } ?>
