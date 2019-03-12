@@ -78,6 +78,8 @@
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+  padding:0;
+  margin:0;
 }
 
 :focus {
@@ -239,7 +241,6 @@
  .i-play:before {
    content: "\62";
  }
-
 
  /** Slick overides **/
 
@@ -704,6 +705,86 @@ div.wpcf7 .ajax-loader {
   }
 
 
-    .list-container {
-      margin-top:12%;
-    }
+  .list-container {
+    margin-top:12%;
+  }
+
+
+  /** Tabs **/
+
+
+  .tabs {
+    width: 100%;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    text-align: left;
+    display: flex;
+  }
+  .tabs input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  .tabs label {
+    display: block;
+    padding: 0.9rem 2.25rem;
+    font-size: 1em;
+    font-weight: normal;
+    background: #00B193;
+    cursor: pointer;
+    position: relative;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color:#2B2E34;
+    font-weight: bold;
+    margin-right:0.75rem;
+    border:2px solid #00B193;
+  }
+  .tabs label:hover {
+    background: transparent;
+    color:#00B193;
+    border-color: #00B193;
+  }
+  .tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+  }
+  .tabs [id^="tab"]:checked + label {
+    top: 0;
+    background: transparent;
+    color:#00B193;
+  }
+  .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
+
+  /* p.link {
+    clear: both;
+    margin: 380px 0 0 15px;
+  }
+  p.link a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #612e76;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  p.link a:hover {
+    background-color: #522764;
+  } */

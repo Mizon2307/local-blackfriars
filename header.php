@@ -38,8 +38,6 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo("template_directory"); ?>/css/slick.css"/>
 
-	<script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
-
 	<?php wp_head(); ?>
 </head>
 

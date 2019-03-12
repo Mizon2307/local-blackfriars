@@ -16,21 +16,6 @@
  });
 
 
-
- // Pano VR view
-
- window.addEventListener('load', onVrViewLoad);
-
- function onVrViewLoad() {
-   // Selector '#vrview' finds element with id 'vrview'.
-   var vrView = new VRView.Player('#vrview', {
-     image: 'http://local.test/wp-content/themes/local-blackfriars/assets/img/BLACKFRIARS_PANO_COURTYARD.jpg',
-     is_stereo: true
-   });
- }
-
-
-
   // Smooth scroll (anchor links)
 
   $('a[href*="#"]')
