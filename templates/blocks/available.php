@@ -6,36 +6,34 @@
 
 <section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="available relative bg-black text-white">
 
-  <div class="container mx-auto max-w-md flex flex-wrap px-8 pt-16 sm:pt-20">
+  <div class="container mx-auto max-w-md flex flex-wrap px-8 sm:px-4 pt-16 sm:pt-20">
     <h3 class="text-teal text-4xl sm:text-5xl tracking-wide text-left mb-10"><?php echo $title; ?></h3>
-    <p class="mb-6"><?php echo $txt; ?></p>
+    <p class="mb-4"><?php echo $txt; ?></p>
 
   </div>
 
 </section>
 
 
-<section class="relative bg-black text-white">
+<section class="relative bg-black text-black">
 
-    <ul class="tabs" role="tablist">
+  <div class="tabs relative flex flex-wrap justify-center bottom">
 
       <?php
-        if( have_rows ('plans') ):
-        while ( have_rows ('plans') ) : the_row();
+        if( have_rows('plans') ): $counter = 0;
+        while ( have_rows('plans') ) : the_row();
+        $counter++;
         $name = get_sub_field('name');
       ?>
 
-      <li>
-          <input type="radio" name="tabs" id="tab1" checked />
-          <label for="tab1" role="tab" aria-selected="false" aria-controls="panel1" tabindex="0"><?php echo $name; ?></label>
+          <input type="radio" name="plans" id="tab-<?php echo $counter;?>">
+					<label for="tab-<?php echo $counter;?>" class="btn"><?php echo $name; ?></label>
 
-
-          <div id="tab-content1" class="tab-content bg-grey" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-
+          <div class="tab panel-<?php echo $counter;?> bg-grey">
 
             <div class="container mx-auto">
 
-              <div class="tab-slider px-6"
+              <div class="tab-slider px-6 py-24"
                 <?php
                   $options = get_sub_field('gallery_options');
                   if( $options ): ?>
@@ -55,7 +53,9 @@
                 ?>
 
                 <?php if(get_sub_field('content_type') == "image") { ?>
-                  <div><img src="<?php echo $img; ?>" class="plan"></div>
+                  <div>
+                    <img src="<?php echo $img; ?>" class="plan">
+                  </div>
                 <?php } ?>
 
 
@@ -101,21 +101,12 @@
                 <?php endwhile; endif; ?>
 
               </div>
-
             </div>
-
-
-
-          </div>
-      </li>
-
-
-
-
+            </div>
 
       <?php endwhile; endif; ?>
 
-    </ul>
+  </div>
 
 </section>
 

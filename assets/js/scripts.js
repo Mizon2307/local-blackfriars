@@ -125,13 +125,18 @@
       infinite: infinite || false,
 
       slidesToShow: 1,
-      'prevArrow': '<i class="icon i-play text-black"></i>',
-      'nextArrow': '<i class="icon i-play slick-next text-black"></i>',
+      'prevArrow': '<i class="icon i-play text-black"><p class="slick-text prev-text">Plan</p></i>',
+      'nextArrow': '<i class="icon i-play slick-next text-black"><p class="slick-text">Specification</p></i>',
       autoplaySpeed:4500,
       speed:1000,
-      mobileFirst: true
+      mobileFirst: true,
+      reInit: true
     });
   });
+
+
+  // Make first tab checked in while loop
+  $('#tab-1').attr('checked',true);
 
 
   // google maps

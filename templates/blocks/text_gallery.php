@@ -7,7 +7,7 @@
 
   <div class="container mx-auto max-w-xl flex flex-wrap">
     <div class="w-full md:w-1/2 sm:pr-10 md:pr-16 lg:pr-24 mb-12 md:mb-0 px-8 self-center">
-      <h3 class="text-teal text-4xl sm:text-5xl lg:text-6xl tracking-wide leading-tight mb-8 sm:mb-10"><?php echo $title; ?></h3>
+      <h3 class="text-teal text-4xl sm:text-5xl lg:text-6xl leading-tight mb-8 sm:mb-10"><?php echo $title; ?></h3>
       <?php echo $txt; ?>
     </div>
     <div class="w-full md:w-1/2 md:px-6">

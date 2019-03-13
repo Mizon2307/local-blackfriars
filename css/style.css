@@ -6459,6 +6459,10 @@ a:hover {
   top: 54%;
 }
 
+.slick-disabled {
+  visibility: hidden;
+}
+
 .slick-dots {
   position: relative;
   bottom: 3.75rem;
@@ -6843,6 +6847,7 @@ div.wpcf7 .ajax-loader {
 .tab-slider .slick-arrow {
   display: none !important;
   left: 0;
+  font-size: 2.25em;
 }
 
 @media (min-width: 992px) {
@@ -6861,10 +6866,11 @@ div.wpcf7 .ajax-loader {
   width: 26rem;
   max-width: 100%;
   margin: 0 auto;
+  display: inline-block;
 }
 
 .tab-slider .slick-dots {
-  bottom: -3rem;
+  bottom: -3.5rem;
 }
 
 .tab-slider .slick-dots li button {
@@ -6891,89 +6897,91 @@ div.wpcf7 .ajax-loader {
   margin-top: 12%;
 }
 
+.slick-text {
+  font-size: .45em;
+  font-style: normal;
+  display: inline-block;
+  position: absolute;
+  right: 3rem;
+  top: .55rem;
+}
+
+.prev-text {
+  transform: rotate(180deg);
+}
+
+.expand-icon {
+  cursor: pointer;
+}
+
 /** Tabs **/
 
 .tabs {
   width: 100%;
-  float: none;
-  list-style: none;
-  position: relative;
-  margin: 0;
-  text-align: left;
-  display: flex;
+  overflow: hidden;
+}
+
+.tabs .tab {
+  order: 99;
+  height: 0;
+  visibility: hidden;
 }
 
 .tabs input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: -9999px;
+  display: none;
 }
 
-.tabs label {
+.tabs input[type="radio"]:checked + label + .tab {
+  height: 100%;
+  width: 100%;
+  visibility: visible;
+  margin-top: .75rem;
+}
+
+.tabs .btn {
+  clear: both;
   display: block;
-  padding: .9rem 2.25rem;
-  font-size: 1em;
-  font-weight: normal;
+  padding: .75rem 2rem;
+  font-size: .95em;
   background: #00b193;
   cursor: pointer;
-  position: relative;
-     -moz-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   color: #2b2e34;
   font-weight: bold;
-  margin-right: .75rem;
+  /* margin-right:0.75rem; */
+  margin: 0 2rem .5rem;
   border: 2px solid #00b193;
-}
-
-.tabs label:hover {
-  background: transparent;
-  color: #00b193;
-  border-color: #00b193;
-}
-
-.tabs .tab-content {
-  z-index: 2;
-  display: none;
-  overflow: hidden;
   width: 100%;
-  padding: 2rem;
-  position: absolute;
-  top: 4.5rem;
-  left: 0;
+  text-align: center;
 }
 
-.tabs [id^="tab"]:checked + label {
-  top: 0;
+@media (min-width: 576px) {
+  .tabs .btn {
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .tabs .btn {
+    width: auto;
+    margin: 0 .75rem 0 0;
+  }
+}
+
+.tabs .btn:hover {
   background: transparent;
   color: #00b193;
 }
 
-.tabs [id^="tab"]:checked ~ [id^="tab-content"] {
-  display: block;
+.tabs input[type="radio"]:checked + .btn {
+  background: transparent;
+  color: #00b193;
 }
 
-/* p.link {
-    clear: both;
-    margin: 380px 0 0 15px;
-  }
-  p.link a {
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    padding: 5px 10px;
-    margin: 0 5px;
-    background-color: #612e76;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-  }
-  p.link a:hover {
-    background-color: #522764;
-  } */
+footer a {
+  color: white;
+}
 
 @media (min-width: 576px) {
   .sm\:list-reset {

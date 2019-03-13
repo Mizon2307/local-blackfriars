@@ -269,10 +269,14 @@
 }
 
 .slick-next {
-    left: auto;
-    right: 2rem;
-    transform: none;
-    top: 54%;
+  left: auto;
+  right: 2rem;
+  transform: none;
+  top: 54%;
+}
+
+.slick-disabled {
+  visibility: hidden;
 }
 
 .slick-dots {
@@ -660,6 +664,7 @@ div.wpcf7 .ajax-loader {
 .tab-slider .slick-arrow {
   display: none !important;
   left:0;
+  font-size: 2.25em;
 }
 
 @screen lg {
@@ -678,10 +683,11 @@ div.wpcf7 .ajax-loader {
    width:26rem;
    max-width:100%;
    margin:0 auto;
+   display: inline-block;
  }
 
   .tab-slider .slick-dots {
-    bottom:-3rem;
+    bottom:-3.5rem;
   }
 
  .tab-slider .slick-dots li button {
@@ -709,82 +715,91 @@ div.wpcf7 .ajax-loader {
     margin-top:12%;
   }
 
-
-  /** Tabs **/
-
-
-  .tabs {
-    width: 100%;
-    float: none;
-    list-style: none;
-    position: relative;
-    margin: 0;
-    text-align: left;
-    display: flex;
-  }
-  .tabs input[type="radio"] {
-    position: absolute;
-    top: 0;
-    left: -9999px;
-  }
-  .tabs label {
-    display: block;
-    padding: 0.9rem 2.25rem;
-    font-size: 1em;
-    font-weight: normal;
-    background: #00B193;
-    cursor: pointer;
-    position: relative;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    color:#2B2E34;
-    font-weight: bold;
-    margin-right:0.75rem;
-    border:2px solid #00B193;
-  }
-  .tabs label:hover {
-    background: transparent;
-    color:#00B193;
-    border-color: #00B193;
-  }
-  .tabs .tab-content {
-    z-index: 2;
-    display: none;
-    overflow: hidden;
-    width: 100%;
-    padding: 2rem;
-    position: absolute;
-    top: 4.5rem;
-    left: 0;
-  }
-  .tabs [id^="tab"]:checked + label {
-    top: 0;
-    background: transparent;
-    color:#00B193;
-  }
-  .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
-    display: block;
-  }
-
-  /* p.link {
-    clear: both;
-    margin: 380px 0 0 15px;
-  }
-  p.link a {
-    text-transform: uppercase;
-    text-decoration: none;
+  .slick-text {
+    font-size: .45em;
+    font-style: normal;
     display: inline-block;
-    color: #fff;
-    padding: 5px 10px;
-    margin: 0 5px;
-    background-color: #612e76;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    position: absolute;
+    right: 3rem;
+    top: 0.55rem;
   }
-  p.link a:hover {
-    background-color: #522764;
-  } */
+
+  .prev-text {
+    transform: rotate(180deg);
+  }
+
+  .expand-icon {
+    cursor: pointer;
+  }
+
+/** Tabs **/
+
+
+.tabs {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabs .tab {
+  order: 99;
+	height:0;
+	visibility: hidden;
+}
+
+.tabs input[type="radio"] {
+	display: none;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+	height:100%;
+  width:100%;
+	visibility: visible;
+	margin-top:0.75rem;
+}
+
+.tabs .btn {
+	clear: both;
+  display: block;
+  padding: 0.75rem 2rem;
+  font-size: 0.95em;
+  background: #00B193;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color:#2B2E34;
+  font-weight: bold;
+  /* margin-right:0.75rem; */
+  margin:0 2rem 0.5rem;
+  border:2px solid #00B193;
+  width:100%;
+  text-align: center;
+}
+
+@screen sm {
+  .tabs .btn {
+    width:auto;
+    margin:0;
+  }
+}
+
+@screen md {
+  .tabs .btn {
+    width:auto;
+    margin:0 0.75rem 0 0;
+  }
+}
+
+.tabs .btn:hover {
+  background: transparent;
+  color:#00B193;
+}
+
+.tabs input[type="radio"]:checked + .btn {
+	background:transparent;
+	color:#00B193;
+}
+
+
+
+footer a {
+  color:white;
+}
