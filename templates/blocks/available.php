@@ -7,7 +7,7 @@
 <section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="available relative bg-black text-white">
 
   <div class="container mx-auto max-w-md flex flex-wrap px-8 sm:px-4 pt-16 sm:pt-20">
-    <h3 class="text-teal text-4xl sm:text-5xl tracking-wide text-left mb-10"><?php echo $title; ?></h3>
+    <h3 class="text-teal text-4xl sm:text-5xl text-left mb-10"><?php echo $title; ?></h3>
     <p class="mb-4"><?php echo $txt; ?></p>
 
   </div>
@@ -64,7 +64,7 @@
 
                     <span class="container mx-auto flex flex-wrap max-w-lg xl:max-w-xl px-4 lg:px-0 h-full list-container">
 
-                      <h3 class="text-black text-4xl sm:text-5xl tracking-wide text-left mb-10 w-full"><?php echo $title; ?></h3>
+                      <h3 class="text-black text-4xl sm:text-5xl text-left mb-10 w-full"><?php echo $title; ?></h3>
 
                       <?php
                         if( have_rows ('lists') ):

@@ -412,6 +412,8 @@ input {
   float: left;
   width: 100%;
   border:2px solid white;
+  border-radius: 0;
+  box-shadow: none;
   color:white;
   background-color:#9B866D;
   padding:0.6rem 0.75rem;
@@ -685,6 +687,12 @@ div.wpcf7 .ajax-loader {
    margin:0 auto;
    display: inline-block;
  }
+
+@screen sm {
+  .tab-slider .plan {
+    display: inherit;
+  }
+}
 
   .tab-slider .slick-dots {
     bottom:-3.5rem;
