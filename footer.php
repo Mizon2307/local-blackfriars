@@ -22,10 +22,10 @@
 </footer>
 
 <div class="footer-bottom flex bg-brown text-white pb-6 px-4 sm:px-8">
-  <div class="w-full sm:w-1/2 sm:pr-3">
+  <div class="w-full sm:w-1/3 sm:pr-3">
     <p class="m0 font-bold text-sm inline-block"><?php the_field('designed_text', 'option'); ?> <a href="<?php the_field('designed_url', 'option'); ?>" target="_blank" class="text-white no-underline hover:text-grey">90degrees</a></p>
   </div>
-  <div class="w-full sm:w-1/2 sm:pl-3 text-right">
+  <div class="w-full sm:w-2/3 sm:pl-3 text-right">
     <ul class="m-0 p-0 hidden md:inline-block md:mr-12">
       <?php if( have_rows('links', 'option') ):
 						while ( have_rows('links', 'option') ) : the_row();?>

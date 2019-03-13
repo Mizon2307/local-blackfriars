@@ -45,7 +45,7 @@
 
 	<header class="fixed bg-brown w-full z-20 flex items-center justify-between px-6 sm:px-8 pt-4 pb-3 lg:py-5">
 
-			<a href="/" class="hidden md:inline-block z-20"><img src="<?php the_field('site_logo', 'option'); ?>" class="w-52"></a>
+			<a href="/" class="hidden md:inline-block z-20"><img src="<?php the_field('site_logo', 'option'); ?>" class="w-52 pt-1"></a>
 
 			<a href="/" class="inline-block md:hidden z-20"><img src="<?php the_field('mobile_logo', 'option'); ?>" class="w-20"></a>
 
@@ -63,10 +63,10 @@
 				<ul class="menu bg-brown m-0 pt-20 pb-8 px-6 text-center lg:p-0 absolute w-full lg:inline-block lg:relative lg:w-auto">
 
 					<?php foreach($sections as $section) { ?>
-			       <li class="list-reset item block lg:inline-block lg:mx-6 xl:mx-10 pb-5 lg:pb-0"><a href="#section-<?php echo str_replace( ' ', '', $section); ?>" class="text-white hover:text-grey font-bold lg:text-bs lg:no-underline"><?= $section; ?></a></li>
+			       <li class="list-reset item block lg:inline-block lg:mx-4 xl:mx-10 pb-5 lg:pb-0"><a href="#section-<?php echo str_replace( ' ', '', $section); ?>" class="text-white hover:text-grey font-bold lg:text-bs lg:no-underline"><?= $section; ?></a></li>
 	      	<?php } //end foreach $sections ?>
 
-					<li class="list-reset item block lg:hidden lg:mx-6 xl:mx-10"><a href="<?php the_field('btn_link', 'option'); ?>" class="text-white hover:text-grey font-bold block"><?php the_field('btn_txt', 'option');?></a></li>
+					<li class="list-reset item block lg:hidden lg:mx-4 xl:mx-10"><a href="<?php the_field('btn_link', 'option'); ?>" class="text-white hover:text-grey font-bold block"><?php the_field('btn_txt', 'option');?></a></li>
 
 				</ul>
 
