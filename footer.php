@@ -21,12 +21,25 @@
   </div>
 </footer>
 
-<div class="footer-bottom flex bg-brown text-white pb-6 px-4 sm:px-8">
-  <div class="w-full sm:w-1/3 sm:pr-3">
-    <p class="m0 font-bold text-sm inline-block"><?php the_field('designed_text', 'option'); ?> <a href="<?php the_field('designed_url', 'option'); ?>" target="_blank" class="text-white no-underline hover:text-grey">90degrees</a></p>
+<div class="footer-bottom flex flex-wrap md:flex-no-wrap items-center bg-brown text-white pb-8 px-4 sm:px-8">
+
+  <div class="w-full w-auto sm:w-2/3 md:1/2 sm:pr-3 text-center sm:text-left flex flex-wrap items-start">
+
+    <div class="w-full sm:w-auto sm:inline-block">
+      <p class="m0 mb-4"><?php the_field('developed_txt', 'option'); ?></p>
+      <img src="<?php the_field('developed_logo', 'option'); ?>" class="mb-8 sm:mb-0 w-28">
+    </div>
+
+    <div class="w-full sm:w-auto sm:inline-block sm:ml-8">
+      <p class="m0 mb-2"><?php the_field('managed_txt', 'option'); ?></p>
+      <img src="<?php the_field('managed_logo', 'option'); ?>" class="w-32">
+    </div>
+
   </div>
-  <div class="w-full sm:w-2/3 sm:pl-3 text-right">
-    <ul class="m-0 p-0 hidden md:inline-block md:mr-12">
+
+  <div class="w-full sm:w-1/3 md:w-1/2 md:pl-3 mt-8 sm:mt-0 text-center sm:text-right">
+
+    <ul class="m-0 p-0 hidden lg:inline-block md:mr-12">
       <?php if( have_rows('links', 'option') ):
 						while ( have_rows('links', 'option') ) : the_row();?>
 
@@ -34,8 +47,11 @@
 
       <?php endwhile; endif; ?>
     </ul>
-    <p class="font-bold text-sm inline-block">&copy; <?php echo date("Y") ?> <?php the_field('copyright', 'option'); ?></p>
+
+    <p class="font-bold text-sm inline-block text-left">&copy; <?php echo date("Y") ?> <?php the_field('copyright', 'option'); ?></p>
+
   </div>
+
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php the_field('api_key', 'option'); ?>"></script>
