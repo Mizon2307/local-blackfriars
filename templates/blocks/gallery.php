@@ -1,6 +1,6 @@
 <section id="section-<?php echo str_replace(' ', '', get_sub_field('nav_label')); ?>" class="gallery relative bg-black">
 
-    <div class="slider h-2/3"
+    <div class="slider h-screen"
       <?php
         $options = get_sub_field('gallery_options');
         if( $options ): ?>
